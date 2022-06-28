@@ -1,9 +1,8 @@
 [package]
 name = "njov40-web"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2018"
 
 [dependencies]
-sycamore = "0.7.1"
+# you can check the latest version here: https://crates.io/crates/yew
+yew = "0.19"

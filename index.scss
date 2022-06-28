@@ -1,0 +1,48 @@
+.button {
+  border-width: 4px;
+  border-color: darkolivegreen;
+  border-radius: 30%;
+  color: rgb(255, 255, 255);
+  background-color: darkcyan;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+button.create {
+  background-color: #008f53;
+  /* Green */
+  width: 200px;
+}
+
+button.destroy {
+  background-color: #ff1f1f;
+  /* Red */
+}
+
+.counter {
+  color: #008f53;
+  font-size: 48px;
+  text-align: center;
+}
+
+.panel {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left_pane {
+  min-width: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.right_pane {
+  min-width: 100px;
+  margin-left: 20px;
+  justify-content: left;
+  border:#008f53 4px;
+}
