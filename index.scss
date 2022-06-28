@@ -11,15 +11,17 @@
   cursor: pointer;
 }
 
+.left_pane_block_header {
+  color: dimgray;
+}
+
 button.create {
   background-color: #008f53;
-  /* Green */
   width: 200px;
 }
 
 button.destroy {
   background-color: #ff1f1f;
-  /* Red */
 }
 
 .counter {
@@ -29,20 +31,19 @@ button.destroy {
 }
 
 .panel {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .left_pane {
-  min-width: 50px;
   margin-right: 20px;
-  margin-left: 20px;
+  max-width: 250px;
 }
 
 .right_pane {
-  min-width: 100px;
+  min-width: 50px;
   margin-left: 20px;
   justify-content: left;
-  border:#008f53 4px;
+  border: #008f53 4px;
 }

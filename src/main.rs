@@ -75,44 +75,56 @@ impl Component for Model {
             .collect::<Html>();
 
         html! {
-            <div class="panel">
-                <div class="left_pane">
-                    <table>
-                        <tr>
-                            <td class="left_pain">
-                                <h1>{ "RustConf Explorer" }</h1>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img class="logo" src="https://yew.rs/img/logo.png" alt="Yew logo" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="button" onclick={link.callback(|_| Msg::AddOne)}>{ "Rust" } </button>
-                                <button class="button" onclick={link.callback(|_| Msg::AddOne)}>{ "Rust" } </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>{ self.value }</p>
-                            </td>
-                        </tr>
-                    </table>
+            <>
+                <table class="universal_header">
+                    <tr>
+                        <td>
+                            { "One-Stop Tech Job Hunt Platform" }
+                        </td>
+                    </tr>
+                </table>
+                <div class="panel">
+                    <div class="left_pane">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3 class="left_pane_block_header">{ "Profile" }</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="logo" src="https://yew.rs/img/logo.png" alt="Yew logo" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="left_pane_block_header">{ "Programming language of interest" }</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="button" onclick={link.callback(|_| Msg::AddOne)}>{ "Rust" } </button>
+                                    <button class="button" onclick={link.callback(|_| Msg::AddOne)}>{ "Rust" } </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>{ self.value }</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right_pane">
+                        <table class="right_pane">
+                            <h3>{"Videos to watch"}</h3>
+                            { videos }
+                            <h3>{ "John Doe: Building and breaking things" }</h3>
+                            <img src="https://via.placeholder.com/640x360.png?text=Video+Player+Placeholder"
+                                alt="video thumbnail" />
+                        </table>
+                    </div>
                 </div>
-                <div class="right_pane">
-                    <table class="right_pane">
-                        <h3>{"Videos to watch"}</h3>
-                        { videos }
-                        <h3>{ "John Doe: Building and breaking things" }</h3>
-                        <img src="https://via.placeholder.com/640x360.png?text=Video+Player+Placeholder"
-                            alt="video thumbnail" />
-                    </table>
-                </div>
-
-            </div>
-        }
+            </>        }
     }
 }
 
